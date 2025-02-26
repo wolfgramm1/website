@@ -1,13 +1,13 @@
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
-    background-color: #87CEEB;
+    background-color: #002b3c;
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #2E8B57;
+    background-color: #003618;
     color: white;
     padding: 20px;
 }
@@ -32,7 +32,7 @@ h1 {
 }
 
 button {
-    background-color: #2E8B57;
+    background-color: #002510;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -42,12 +42,12 @@ button {
 }
 
 button:hover {
-    background-color: #3CB371;
+    background-color: #003618;
 }
 
 footer {
     margin-top: 50px;
     padding: 10px;
-    background-color: #2E8B57;
+    background-color:  #002510;
     color: white;
 }
