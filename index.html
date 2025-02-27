@@ -3,51 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gone Fishin'</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Puzzle Adventure</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #1e1e1e;
+            color: white;
+        }
+        .puzzle-container {
+            margin-top: 50px;
+        }
+        .hidden-link {
+            display: none;
+        }
+        input {
+            padding: 10px;
+            margin-top: 10px;
+        }
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Gone Fishin' - The Only Website You Need</h1>
-    </header>
-
-    <main>
-        <p>Welcome to the ultimate fly-fishing experience... on the internet. Here, you won't catch any fish, but you might catch some bad puns.</p>
-        
-        <div class="fish-container">
-            <p>Try to catch this fish:</p>
-            <img id="fish" src="maddieFish.jpg" alt="Trout">
-        </div>
-
-        <button id="castLine">Cast Your Line</button>
-
-        <p id="result"></p>
-    </main>
-
-    <footer>
-        <p>© 2025 Gone Fishin' Inc. We are definitely not responsible for your lack of fishing skills.</p>
-    </footer>
+    <h1>Welcome to the Puzzle Adventure</h1>
+    <div class="puzzle-container">
+        <p>Solve this puzzle to proceed: What is 5 + 3?</p>
+        <input type="text" id="answer" placeholder="Enter your answer">
+        <button onclick="checkAnswer()">Submit</button>
+        <p id="hint"></p>
+        <a href="nextpage.html" id="nextLink" class="hidden-link">Proceed to the next challenge</a>
+    </div>
 
     <script>
-        const fish = document.getElementById("fish");
-        const button = document.getElementById("castLine");
-        const result = document.getElementById("result");
-
-        fish.addEventListener("mouseover", () => {
-            fish.style.top = Math.random() * 300 + "px";
-            fish.style.left = Math.random() * 300 + "px";
-        });
-
-        button.addEventListener("click", () => {
-            const outcomes = [
-                "You caught a boot. Congratulations?",
-                "Your fly got stuck in a tree. Try again.",
-                "You scared all the fish away by talking too loud.",
-                "A trout took your fly but swam off laughing.",
-                "Success! You caught a fish... just kidding."
-            ];
-            result.textContent = outcomes[Math.floor(Math.random() * outcomes.length)];
-        });
+        function checkAnswer() {
+            let userAnswer = document.getElementById("answer").value;
+            if (userAnswer.trim() === "8") {
+                document.getElementById("nextLink").style.display = "block";
+                document.getElementById("hint").innerText = "Correct! Click the link to continue.";
+            } else {
+                document.getElementById("hint").innerText = "Incorrect. Try again.";
+            }
+        }
     </script>
 </body>
 </html>

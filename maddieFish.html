@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gone Fishin'</title>
+    <link rel="stylesheet" href="maddieFish.css">
+</head>
+<body>
+    <header>
+        <h1>Gone Fishin' - The Only Website You Need</h1>
+    </header>
+
+    <main>
+        <p>Welcome to the ultimate fly-fishing experience... on the internet. Here, you won't catch any fish, but you might catch some bad puns.</p>
+        
+        <div class="fish-container">
+            <p>Try to catch this fish:</p>
+            <img id="fish" src="maddieFish.jpg" alt="Trout">
+        </div>
+
+        <button id="castLine">Cast Your Line</button>
+
+        <p id="result"></p>
+    </main>
+
+    <footer>
+        <p>© 2025 Gone Fishin' Inc. We are definitely not responsible for your lack of fishing skills.</p>
+    </footer>
+
+    <script>
+        const fish = document.getElementById("fish");
+        const button = document.getElementById("castLine");
+        const result = document.getElementById("result");
+
+        fish.addEventListener("mouseover", () => {
+            fish.style.top = Math.random() * 300 + "px";
+            fish.style.left = Math.random() * 300 + "px";
+        });
+
+        button.addEventListener("click", () => {
+            const outcomes = [
+                "You caught a boot. Congratulations?",
+                "Your fly got stuck in a tree. Try again.",
+                "You scared all the fish away by talking too loud.",
+                "A trout took your fly but swam off laughing.",
+                "Success! You caught a fish... just kidding."
+            ];
+            result.textContent = outcomes[Math.floor(Math.random() * outcomes.length)];
+        });
+    </script>
+</body>
+</html>
