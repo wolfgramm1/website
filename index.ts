@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setTimeout(() => {
         hiddenButton.style.display = "block";
-    }, 15000); 
+    }, 5000); 
 
     hiddenButton.addEventListener("click", () => {
         window.location.href = "puzzle_adventure.html";
