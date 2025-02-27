@@ -3,50 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Puzzle Adventure</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #1e1e1e;
-            color: white;
-        }
-        .puzzle-container {
-            margin-top: 50px;
-        }
-        .hidden-link {
-            display: none;
-        }
-        input {
-            padding: 10px;
-            margin-top: 10px;
-        }
-        button {
-            padding: 10px;
-            margin-top: 10px;
-            cursor: pointer;
-        }
-    </style>
+    <title>Welcome to the Puzzle Adventure</title>
+    <link rel="stylesheet" href="style.scss">
 </head>
 <body>
-    <div class="puzzle-container">
-        <p>Solve this puzzle to proceed: Where did we watch dateline?</p>
-        <input type="text" id="answer" placeholder="Enter your answer">
-        <button onclick="checkAnswer()">Submit</button>
-        <p id="hint"></p>
-        <a href="maddieFish.html" id="nextLink" class="hidden-link">Proceed to the next challenge</a>
+    <div class="container">
+        <h1>Welcome to the Puzzle Adventure</h1>
+        <p>Find the hidden button to begin your journey...</p>
+        <button id="hiddenButton" class="hidden">Start the Puzzle</button>
     </div>
-
-    <script>
-        function checkAnswer() {
-            let userAnswer = document.getElementById("answer").value;
-            if (userAnswer.trim() === "fish lake" || "Fish Lake" || "Fish lake" || "fishlake") {
-                document.getElementById("nextLink").style.display = "block";
-                document.getElementById("hint").innerText = "Correct! Click the link to continue.";
-            } else {
-                document.getElementById("hint").innerText = "Incorrect. Try again.";
-            }
-        }
-    </script>
+    <script src="index.ts"></script>
 </body>
 </html>
