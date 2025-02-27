@@ -29,19 +29,18 @@
     </style>
 </head>
 <body>
-    <h1>Welcome to the Puzzle Adventure</h1>
     <div class="puzzle-container">
-        <p>Solve this puzzle to proceed: What is 5 + 3?</p>
+        <p>Solve this puzzle to proceed: Where did we watch dateline?</p>
         <input type="text" id="answer" placeholder="Enter your answer">
         <button onclick="checkAnswer()">Submit</button>
         <p id="hint"></p>
-        <a href="nextpage.html" id="nextLink" class="hidden-link">Proceed to the next challenge</a>
+        <a href="maddieFish.html" id="nextLink" class="hidden-link">Proceed to the next challenge</a>
     </div>
 
     <script>
         function checkAnswer() {
             let userAnswer = document.getElementById("answer").value;
-            if (userAnswer.trim() === "8") {
+            if (userAnswer.trim() === "fish lake" || "Fish Lake" || "Fish lake" || "fishlake") {
                 document.getElementById("nextLink").style.display = "block";
                 document.getElementById("hint").innerText = "Correct! Click the link to continue.";
             } else {
